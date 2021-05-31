@@ -142,13 +142,14 @@ async def cb_navg(bot, update: CallbackQuery):
     
     reply_markup = InlineKeyboardMarkup(temp_results)
     
-    text=f"<i>Found</i> <code>{leng}</code> <i>Results For Your Query:</i> <code>{query}</code>"
+    text=f"<b>{query}</b>\n<i>({leng} Results)</i>\n\n⭕️ <i>If you didn't get required movie pls contact us</i> <b><a href='http://t.me/Malayalam_Movees_Bot'>👉 CLICH HERE 👈</a></b>\n\n<b>🛑You must Join Channels to access the links given below🛑\n\n<b>@Malayalam_Movees ©\n@Film_Caffe © (Series)</b>"
         
     try:
         await update.message.edit(
                 text,
                 reply_markup=reply_markup,
                 parse_mode="html"
+
         )
         
     except FloodWait as f: # Flood Wait Caused By Spamming Next/Back Buttons
@@ -157,6 +158,7 @@ async def cb_navg(bot, update: CallbackQuery):
                 text,
                 reply_markup=reply_markup,
                 parse_mode="html"
+
         )
 
 
@@ -1601,14 +1603,14 @@ async def cb_about(bot, update: CallbackQuery):
     text=f"<i><u>Bot's Status</u></i>\n"
     text+=f"\n<b><i>Bot's Uptime:</i></b> <code>{time_formatter(time.time() - start_uptime)}</code>\n"
     text+=f"\n<b><i>Bot Funtion:</i></b> <i>Auto Filter Files</i>\n"
-    text+=f"""\n<b><i>Bot Support:</i></b> <a href="https://t.me/CrazyBotszGrp">@CrazyBotszGrp</a>\n"""
-    text+="""\n<b><i>Source Code:</i></b> <a href="https://github.com/AlbertEinsteinTG/Adv-Filter-Bot-V2">Source</a>"""
+    text+=f"""\n<b><i>Bot Support:</i></b> <a href="http://t.me/Malayalam_Movees">http://t.me/Malayalam_Movees</a>\n"""
+    text+="""\n<b><i>Source Code:</i></b> <a href="http://t.me/Malayalam_Movees">Source</a>"""
 
     buttons = [
         [
             InlineKeyboardButton
                 (
-                    "My Dev ⚡", url="https://t.me/AlbertEinstein_TG"
+                    "My Dev ⚡", url="http://t.me/Malayalam_Movees"
                 ),
                 
             InlineKeyboardButton
@@ -1639,10 +1641,10 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-            InlineKeyboardButton('My Dev 👨‍🔬', url='https://t.me/AlbertEinstein_TG'),
-            InlineKeyboardButton('Source Code 🧾', url ='https://github.com/AlbertEinsteinTG/Adv-Auto-Filter-Bot')
+            InlineKeyboardButton('My Dev 👨‍🔬', url='http://t.me/Malayalam_Movees'),
+            InlineKeyboardButton('Source Code 🧾', url ='http://t.me/Malayalam_Movees')
         ],[
-            InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
+            InlineKeyboardButton('Support 🛠', url='http://t.me/Malayalam_Movees')
         ],[
             InlineKeyboardButton('Help ⚙', callback_data="help")
         ]]
